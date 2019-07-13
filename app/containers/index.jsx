@@ -30,7 +30,9 @@ class App extends React.Component {
         if(cityName == null) {
             cityName = '北京'
         }
-
+        this.props.userInfoActions.update({
+            cityName: cityName
+        })
         this.setState({
             initDone: true
         })
