@@ -15,8 +15,8 @@ module.exports = {
   module: {
     rules: [
         { test: /\.(js|jsx)$/,exclude:/node_modules/,loader:'babel-loader',query:{presets:['react']} },
-        { test:/\.less$/,exclude:/node_modules/,loader:'style!css!postcss!less' },
-        { test:/\.css$/,exclude:/node_modules/,loader:'style!css!postcss-loader' },
+        { test:/\.less$/,exclude:/node_modules/,loader:'style-loader!css-loader!postcss-loader!less-loader' },
+        { test:/\.css$/,exclude:/node_modules/,loader:'style-loader!css-loader!postcss-loader' },
         { test:/\.(png|gif|jpg|jpeg|bmp)$/,loader:'url-loader' },
         { test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/,loader:'url-loader' }
     ]
