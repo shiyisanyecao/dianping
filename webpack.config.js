@@ -14,7 +14,7 @@ module.exports = {
   },
   module: {
     rules: [
-        { test: /\.(js|jsx)$/,exclude:/node_modules/,loader:'babel-loader' },
+        { test: /\.(js|jsx)$/,exclude:/node_modules/,loader:'babel-loader',query:{presets:['react']} },
         // { test:/\.less$/,exclude:/node_modules/,loader:'style!css!postcss!less' },
         // { test:/\.css$/,exclude:/node_modules/,loader:'style!css!postcss' },
         // { test:/\.(png|gif|jpg|jpeg|bmp)$/$,loader:'url-loader!limit=5000' },
@@ -26,7 +26,8 @@ module.exports = {
 //   ],
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname = path.resolve(__dirname,'app/index.tmpl.html')
+      template: __dirname = __dirname+'/app/index.tmpl.html',
+      filename: 'index.html'
     }),
     // new webpack.HotModuleReplacementPlugin(),
     // new OpenBrowserPlugin({
