@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/shiyisanyecao/dianping#readme",
   "dependencies": {
-    "autoprefixer": "^9.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "extract-text-webpack-plugin": "^3.0.2",
+    "open-browser-webpack-plugin": "0.0.5",
     "react": "^16.8.6",
     "react-addons-pure-render-mixin": "^15.6.2",
     "react-dom": "^16.8.6",
@@ -29,6 +29,7 @@
     "redux": "^4.0.4"
   },
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "css-loader": "^3.0.0",
