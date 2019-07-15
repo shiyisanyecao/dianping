@@ -36,9 +36,11 @@ module.exports = {
     })
   ],
   devServer: {
-      colors: true,
+      // colors: true,
       historyApiFallback: true,
+      contentBase:'./build/',
       inline: true,
-      hot: true
+      hot: true,
+      port: '8080'
   }
 };
