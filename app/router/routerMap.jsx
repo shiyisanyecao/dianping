@@ -17,13 +17,14 @@ class RouterMap extends React.Component {
         return (
             <Router history={this.props.history} onUpdate={this.updateHandle.bind(this)}>
                 <Switch>
-                    <Route exact path="/" component={App} render={()=><Redirect to='/home'></Redirect>}/>
+                    <Route path="/" component={App} render={()=><Redirect to='/home'></Redirect>}>
                     <Route path="/home" component={Home}/>
                     <Route path="/search" component={Search}/>
                     <Route path="/user" component={User}/>
                     <Route path="/city" component={City}/>
                     <Route path="/detail" component={Detail}/>
                     <Route component={NotFound}/>
+                    </Route>
                 </Switch>
             </Router>
         )
