@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, IndexRoute } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Redirect, Route, IndexRoute } from 'react-router-dom'
 
 import App from '../containers/index.jsx'
 import Home from '../containers/Home/index.jsx'
@@ -16,14 +16,15 @@ class RouterMap extends React.Component {
     render() {
         return (
             <Router history={this.props.history} onUpdate={this.updateHandle.bind(this)}>
-                <Route path="/" component={App}>
+                <Switch>
+                    <Route exact path="/" component={App} render={()=><Redirect to='/home'></Redirect>}/>
                     <Route path="/home" component={Home}/>
                     <Route path="/search" component={Search}/>
                     <Route path="/user" component={User}/>
                     <Route path="/city" component={City}/>
                     <Route path="/detail" component={Detail}/>
                     <Route component={NotFound}/>
-                </Route>
+                </Switch>
             </Router>
         )
     }
