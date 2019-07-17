@@ -17,5 +17,5 @@ class Home extends React.Component {
     }
 }
 
-// export default NotFound
+// export default Home
 module.exports = Home
