@@ -26,32 +26,32 @@ class App extends React.Component {
         )
     }
     componentDidMount() {
-        // let cityName = LocalStore.getItem(CITYNAME)
-        // if(cityName == null) {
-        //     cityName = '北京'
-        // }
-        // this.props.userInfoActions.update({
-        //     cityName: cityName
-        // })
+        let cityName = LocalStore.getItem(CITYNAME)
+        if(cityName == null) {
+            cityName = '北京'
+        }
+        this.props.userInfoActions.update({
+            cityName: cityName
+        })
         this.setState({
             initDone: true
         })
     }
 }
 
-// function mapStateToProps(state) {
-//     return {
+function mapStateToProps(state) {
+    return {
 
-//     }
-// }
+    }
+}
 
-// function mapDispatchToProps(dispatch) {
-//     return {
-//         userInfoActions: bindActionCreators(userInfoActionsFormOtherFile,dispatch)
-//     }
-// }
+function mapDispatchToProps(dispatch) {
+    return {
+        userInfoActions: bindActionCreators(userInfoActionsFormOtherFile,dispatch)
+    }
+}
 
-// export default connect(
-//     mapStateToProps,mapDispatchToProps
-// )(App)
-export default App
+export default connect(
+    mapStateToProps,mapDispatchToProps
+)(App)
+// export default App
