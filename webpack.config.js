@@ -17,8 +17,8 @@ module.exports = {
         { test: /\.(js|jsx)$/,exclude:/node_modules/,loader:'babel-loader',query:{presets:['react']} },
         { test:/\.less$/,exclude:/node_modules/,loader:'style-loader!css-loader!postcss-loader!less-loader' },
         { test:/\.css$/,exclude:/node_modules/,loader:'style-loader!css-loader!postcss-loader' },
-        { test:/\.(png|gif|jpg|jpeg|bmp)$/i,loader:'url-loader?limit=5000' },
-        { test:/\.(woff|woff2|svg|ttf|eot)($|\?)/i,loader:'url-loader?limit=5000' }
+        { test:/\.(png|gif|jpg|jpeg|bmp)$/i,loader:'file-loader!url-loader?limit=5000' },
+        { test:/\.(woff|woff2|svg|ttf|eot)($|\?)/i,loader:'file-loader!url-loader?limit=5000' }
     ]
   },
   plugins: [

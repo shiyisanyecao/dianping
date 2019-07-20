@@ -26,13 +26,13 @@ class App extends React.Component {
         )
     }
     componentDidMount() {
-        let cityName = LocalStore.getItem(CITYNAME)
-        if(cityName == null) {
-            cityName = '北京'
-        }
-        this.props.userInfoActions.update({
-            cityName: cityName
-        })
+        // let cityName = LocalStore.getItem(CITYNAME)
+        // if(cityName == null) {
+        //     cityName = '北京'
+        // }
+        // this.props.userInfoActions.update({
+        //     cityName: cityName
+        // })
         this.setState({
             initDone: true
         })

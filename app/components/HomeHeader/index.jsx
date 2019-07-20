@@ -2,7 +2,7 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import '../../static/css/common.less'
 import './style.less'
-
+import a from '../../static/img/yonghu.png'
 
 class HomeHeader extends React.Component {
     constructor(props,context) {
@@ -14,7 +14,8 @@ class HomeHeader extends React.Component {
             <div className="clear-fix header-box">
                 <div className="float-left">
                     深圳
-                    <i className="icon-angel-down"></i>
+                    <img src={a} alt="ps"/>
+                    {/* <i className="icon-angel-down"></i> */}
                 </div>
                 <div className="float-left">
                     <i className="icon-user"></i>
